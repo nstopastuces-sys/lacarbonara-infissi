@@ -1,4 +1,4 @@
-/* TeKnoProfil — LaCarbonaraGiovanni Srl */
+/* TeKnoProfil */
 (function () {
   'use strict';
 

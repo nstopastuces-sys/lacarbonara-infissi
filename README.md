@@ -1,10 +1,9 @@
-# TeKnoProfil — LaCarbonaraGiovanni Srl
+# TeKnoProfil
 
-Sito vetrina di **TeKnoProfil**, marchio di LaCarbonaraGiovanni Srl (titolare Giovanni Lacarbonara):
+Sito vetrina di **TeKnoProfil** (titolare Giovanni Lacarbonara):
 infissi, porte, persiane, grate e verande su misura.
 
 - Showroom: Via Extramurale 559, 74020 Leporano (TA)
-- Sede e laboratorio: Via la Fosa 11, 74026 Pulsano (TA)
 - Tel. / WhatsApp: 327 847 3088
 
 ## Pagine
@@ -14,7 +13,7 @@ infissi, porte, persiane, grate e verande su misura.
 | `index.html` | Home: slider a tutto schermo, soluzioni, azienda, metodo, detrazioni, realizzazioni |
 | `soluzioni.html` | Le nostre soluzioni, una sezione per prodotto |
 | `realizzazioni.html` | Galleria con filtri e lightbox (foto Instagram / Facebook / Google) |
-| `contatti.html` | Showroom e laboratorio con mappe, orari, modulo preventivo verso WhatsApp |
+| `contatti.html` | Showroom con mappa, orari, modulo preventivo verso WhatsApp |
 
 ## Struttura
 

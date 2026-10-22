@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TeKnoProfil — LaCarbonaraGiovanni Srl
+   TeKnoProfil
    Charte : noir / rouge TeKnoProfil / crème, accents tricolores
    ========================================================================== */
 
@@ -85,23 +85,9 @@ p { margin: 0 0 1.1em; }
 .title-rule { display: block; width: 46px; height: 2px; background: var(--red); margin: 18px auto 0; }
 
 /* ---------- Logo ---------- */
-.logo { display: inline-flex; flex-direction: column; line-height: 1; color: var(--ink); }
-.logo-mark {
-  font-family: var(--f-display); font-weight: 600; font-size: 31px; letter-spacing: -.01em;
-  display: inline-flex; align-items: flex-end; white-space: nowrap;
-}
-.logo-k {
-  position: relative; color: var(--red); font-size: 1.5em; line-height: .72; margin: 0 .015em 0 .03em;
-  font-weight: 600;
-}
-.logo-k::before {
-  content: ""; position: absolute; left: -.13em; top: -.13em; width: .62em; height: .55em;
-  border-top: 2px solid var(--red); border-left: 2px solid var(--red);
-}
-.logo-tag {
-  font-family: var(--f-display); font-style: italic; font-size: 12.5px; letter-spacing: .02em;
-  margin: 5px 0 0 1.95em; color: var(--muted); white-space: nowrap;
-}
+.logo { display: inline-flex; align-items: center; line-height: 0; }
+.logo-img { display: block; height: 62px; width: auto; }
+.logo-img--dark { display: none; }
 
 /* ---------- Buttons : "anta" — le due ante si aprono al passaggio ---------- */
 .btn {
@@ -173,11 +159,9 @@ p { margin: 0 0 1.1em; }
 
 .header { height: var(--hh); transition: background .4s, box-shadow .4s, color .4s; color: #fff; }
 .header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.header .logo { color: #fff; }
-.header .logo-tag { color: rgba(255,255,255,.75); }
 .site-top.is-solid .header { background: rgba(250,248,244,.97); color: var(--ink); box-shadow: 0 1px 0 var(--line), 0 10px 30px -20px rgba(0,0,0,.4); backdrop-filter: blur(10px); }
-.site-top.is-solid .header .logo { color: var(--ink); }
-.site-top.is-solid .header .logo-tag { color: var(--muted); }
+.site-top.is-solid .header .logo-img--light { display: none; }
+.site-top.is-solid .header .logo-img--dark { display: block; }
 .site-top.is-scrolled { transform: translateY(calc(-1 * var(--tb))); }
 
 .nav { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 36px); }
@@ -207,8 +191,6 @@ p { margin: 0 0 1.1em; }
 }
 .mmenu.is-open { clip-path: inset(0 0 0 0); visibility: visible; transition: clip-path .7s var(--ease), visibility 0s; }
 .mmenu-head { display: flex; justify-content: space-between; align-items: center; }
-.mmenu-head .logo { color: #fff; }
-.mmenu-head .logo-tag { color: rgba(255,255,255,.6); }
 .mmenu nav { display: flex; flex-direction: column; margin: auto 0; }
 .mmenu nav a {
   font-family: var(--f-display); font-size: 2.4rem; font-weight: 500; padding: 8px 0;
@@ -492,6 +474,11 @@ a.quick-item:hover { background: rgba(255,255,255,.04); }
 .place h3 { font-size: 1.9rem; margin-bottom: 4px; }
 .place address { font-style: normal; color: var(--muted); margin-bottom: 18px; }
 .place .btn-row { margin-top: auto; }
+.contact-grid--single { grid-template-columns: 1fr; }
+.contact-grid--single .place { flex-direction: row; }
+.contact-grid--single .place-map { flex: 1.5; aspect-ratio: auto; min-height: 380px; }
+.contact-grid--single .place-body { flex: 1; justify-content: center; }
+.contact-grid--single .place .btn-row { margin-top: 14px; }
 
 .contact-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 60px; }
 .ccard { display: flex; flex-direction: column; gap: 10px; padding: 28px 24px; background: #fff; border-radius: var(--radius); box-shadow: 0 0 0 1px var(--line); transition: transform .45s var(--ease), box-shadow .45s; }
@@ -527,17 +514,13 @@ a.ccard:hover { transform: translateY(-4px); box-shadow: var(--shadow), 0 0 0 1p
 /* ---------- Footer ---------- */
 .footer { background: var(--ink); color: rgba(255,255,255,.72); font-size: .95rem; }
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.1fr; gap: 50px; padding-top: 80px; padding-bottom: 60px; }
-.footer .logo { color: #fff; }
-.footer .logo-tag { color: rgba(255,255,255,.55); }
+.footer .logo-img { height: 78px; }
 .footer h4 { font-family: var(--f-text); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: #fff; font-weight: 500; margin-bottom: 20px; }
 .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .footer a:hover { color: #fff; }
 .footer li { display: flex; gap: 10px; align-items: flex-start; }
 .footer li .i { color: var(--red); margin-top: 4px; }
 .footer-brand p { margin: 22px 0; max-width: 34ch; }
-.lcg { display: flex; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.1); }
-.lcg b { display: block; color: #fff; font-family: var(--f-display); font-size: 1.15rem; font-weight: 600; }
-.lcg span { font-size: .8rem; }
 .social { display: flex; gap: 10px; margin-top: 22px; }
 .social a { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); transition: background .3s, box-shadow .3s; }
 .social a:hover { background: var(--red); box-shadow: none; }
@@ -602,9 +585,7 @@ a.ccard:hover { transform: translateY(-4px); box-shadow: var(--shadow), 0 0 0 1p
   position: absolute; inset: 0; display: grid; place-items: center; z-index: 2; color: #fff;
   opacity: 0; transition: opacity .3s ease;
 }
-.wt-brand .logo { color: #fff; align-items: center; }
-.wt-brand .logo-mark { font-size: clamp(34px, 5vw, 56px); }
-.wt-brand .logo-tag { color: rgba(255,255,255,.6); margin-left: 0; font-size: clamp(13px, 1.3vw, 16px); }
+.wt-brand .logo-img { height: clamp(80px, 13vw, 160px); max-width: 86vw; object-fit: contain; }
 
 /* stato chiuso (in uscita / prima dell'apertura) */
 .wt-closed .wt, .wt-leave .wt { pointer-events: all; }
@@ -644,9 +625,10 @@ a.ccard:hover { transform: translateY(-4px); box-shadow: var(--shadow), 0 0 0 1p
   .topbar { display: none; }
   .nav, .header-phone { display: none; }
   .burger { display: inline-flex; }
-  .logo-mark { font-size: 26px; }
-  .logo-tag { font-size: 11px; }
+  .logo-img { height: 50px; }
   .split, .band-inner, .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid--single .place { flex-direction: column; }
+  .contact-grid--single .place-map { flex: none; aspect-ratio: 16 / 10; min-height: 0; }
   .split--rev .split-media { order: 0; }
   .media-badge { right: 12px; bottom: 12px; padding: 16px 18px; }
   .media-badge b { font-size: 2rem; }
