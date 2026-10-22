@@ -646,8 +646,8 @@ a.ccard:hover { transform: translateY(-4px); box-shadow: var(--shadow), 0 0 0 1p
   .mbar .i { width: 22px; height: 22px; }
   .mbar a.is-red { background: var(--red); }
   .mbar a.is-wa .i { color: #25d366; }
-  .hero { height: calc(100svh - 66px); min-height: 560px; }
-  .hero-content { justify-content: flex-end; padding-bottom: 120px; }
+  .hero { height: auto; min-height: calc(100svh - 66px); display: flex; flex-direction: column; }
+  .hero-content { flex: 1; height: auto; justify-content: flex-end; padding-top: calc(var(--hh) + 36px); padding-bottom: 130px; }
   .hero::after { background: linear-gradient(180deg, rgba(10,10,10,.5) 0%, rgba(10,10,10,.15) 30%, rgba(10,10,10,.65) 62%, rgba(10,10,10,.9) 100%); }
   .scroll-cue { display: none; }
   .hero-bottom { padding-bottom: 22px; }
