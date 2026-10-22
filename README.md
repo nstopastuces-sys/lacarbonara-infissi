@@ -26,6 +26,19 @@ assets/img/            immagini ottimizzate
 Sito statico, nessuna dipendenza: si apre direttamente `index.html` oppure si pubblica su
 qualsiasi hosting (GitHub Pages, Netlify, Aruba…).
 
+## Pubblicazione
+
+- **Anteprima attuale**: GitHub Pages, repo `nstopastuces-sys/lacarbonara-infissi`, branch `main`
+  (radice) → https://nstopastuces-sys.github.io/lacarbonara-infissi/
+- **Non indicizzato**: ogni pagina ha `<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">`.
+  Nessun `robots.txt`: su un sito GitHub Pages "di progetto" non sarebbe alla radice del dominio
+  e verrebbe ignorato; inoltre un `Disallow` impedirebbe a Google di leggere il `noindex`.
+- **Messa online definitiva** (dominio `teknoprofil.it`, oggi parcheggiato su Aruba):
+  1. togliere il meta `robots` dalle 4 pagine;
+  2. collegare il dominio (file `CNAME` + DNS) o caricare i file sull'hosting scelto;
+  3. sostituire le foto segnaposto e confermare gli orari (vedi sotto);
+  4. registrare il sito su Google Search Console e Google Business Profile.
+
 ## Da modificare
 
 - **Orari**: oggetto `INFO.hours` in `assets/js/main.js` e testi nelle pagine.
